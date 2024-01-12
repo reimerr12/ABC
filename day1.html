@@ -2,126 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ahbab Sameer">
     <title>Little taco shop</title>
     <link rel="icon" href="images/32387-taco-icon.png">
     <link rel="stylesheet" href="style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Little Taco shop</h1>
-        <nav>
-            <ul>
+    <header class="header">
+        <h1 class="header__h1">Little Taco shop</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
                 <li>
-                    <a href="#about">About <abbr title="Welcome to the Little Taco shop"></abbr>LTS</a>
+                    <a href="#menu"> Menu</a>
                 </li>
                 <li>
-                    <a href="#menu">Our menu</a>
+                    <a href="hours.html"> Hours</a>
                 </li>
                 <li>
-                    <a href="hours.html">Store hours</a>
+                    <a href="contact.html">Contact </a>
                 </li>
                 <li>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About</a>
                 </li>
             </ul>
         </nav>
+    </header>
 
+    <section class="hero">
+        <h2 class="hero__h2">Bienvenidos!</h2>
         <figure>
-            <img src="images/tacos_and_drink_400x267.png" alt="Taco and drinks" title="we love tacos">
-            <figcaption>
+            <img src="images/tacos_and_drink_400x267.png" alt="Taco and drinks" title="we love tacos" width="1000" height="667">
+            <figcaption class="offscreen">
                 tacos and a drink
             </figcaption>
         </figure>
-    </header>
-    <hr>
-    <main>
-        <!--content-->
-        <article id="about">
-            <h2>About <abbr title=" Little Taco shop">LTS</abbr></h2>
-            <p>
-                <abbr title=" Little Taco shop">LTS</abbr> was founded in <time datetime="2024">2024</time>. Our shop was built from a <strong>love of tacos</strong> 🌮🌮🌮. we hope our shop adds a unique and interesting place to our little town
-            </p>
-            <aside>
-                <h3>Taco Trivia</h3>
-                <details>
-                    <summary>
-                        Whren did first appear in Bangladesh?
-                    </summary>
-                    <p>
-                        Tacos are still a relatively a new type of food in bangladesh but it first started appearing in <time datetime="2024">2024</time>. (Source:<cite><a href="https://www.smithsonianmag.com/arts-culture/where-did-the-taco-come-from-81228162/">Smithsonian Magazine</a></cite>)
-                    </p>
-                    <img src="images/32387-taco-icon.png" alt="picture">
-                </details>
-            </aside>
-        </article>
-        <hr>
-        <article id="menu">
-            <h2>Our Menu</h2>
-            <table>
-                <caption>Our Tacos</caption>
+    </section>
+  
+    <main class="main">
+        
+        <article id="menu" class="main__article menu">
+            <h2 class="menu__h2">Our Menu</h2>
+            <table class="menu__container">
+                <caption class="offscreen">Our Tacos</caption>
                 <thead>
                     <tr>
-                        <th>Tacos</th>
-                        <th scope="col"><abbr title="Quantity">Qty</abbr></th>
-                        <th scope="col">price</th>
+                        <th class="menu__header" scope="col">Tacos</th>
+                        <th class="menu__header"  scope="col">Quantity</th>
+                        <th class="menu__header" scope="col">price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row" rowspan="3">
+                        <th class="menu__item menu__cr" scope="row" rowspan="3">
                             Crunchy
                         </th>
 
-                        <td>1</td>
-                        <td>100 taka</td>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">100 taka</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>200 taka</td>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">200 taka</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>300 taka</td>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">300 taka</td>
                     </tr>
                     <tr>
-                        <th scope="row" rowspan="3">
+                        <th class="menu__item menu__sf" scope="row" rowspan="3">
                             Soft
                         </th>
-                        
-                        <td>1</td>
-                        <td>105 taka</td>
+
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">105 taka</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>205 taka</td>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">205 taka</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>305 taka</td>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">305 taka</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3"> chimps &amp; salsa 50 taka
+                        <td class="menu__item menu__cs" colspan="3"> chimps &amp; salsa 50 taka
 
                         </td>
                     </tr>
                 </tfoot>
             </table>
-            <br>
-            <p>
+            
+            <p class="center">
                 <a href="#">Back to the top</a>
             </p>
         </article>
-
-
-
-
     </main>
-    <hr>
-    <footer>
-        <p>copyright &copy;  Little Taco shop</p>
+    
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+             <span class="nowrap"> Little Taco shop</span>
+        </p>
     </footer>
 </body>
 </html>
